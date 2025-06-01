@@ -1,0 +1,9 @@
+<h1>Chatbot</h1>
+
+<%= form_with url: ask_path(format: :js), local: false do |f| %>
+  <%= f.label :question, "Ask something:" %><br>
+  <%= f.text_field :question, size: 50 %><br>
+  <%= f.submit "Ask" %>
+<% end %>
+
+<div id="response"></div>
